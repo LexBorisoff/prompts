@@ -3,7 +3,9 @@
   "version": "0.0.0-semantically-released",
   "description": "",
   "main": "./dist/index.js",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
   "author": {
     "name": "Lex Borisoff",
     "email": "lex@borisoff.dev",
@@ -26,5 +28,12 @@
     "menu",
     "ask",
     "interact"
-  ]
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@lexjs/eslint-plugin": "^1.0.0",
+    "husky": "^9.1.7",
+    "typescript": "^5.7.2"
+  }
 }
