@@ -1,0 +1,30 @@
+{
+  "name": "@lexjs/prompts",
+  "version": "0.0.0-semantically-released",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {},
+  "author": {
+    "name": "Lex Borisoff",
+    "email": "lex@borisoff.dev",
+    "url": "https://borisoff.dev"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "ISC",
+  "keywords": [
+    "ui",
+    "prompts",
+    "cli",
+    "prompt",
+    "interface",
+    "command-line",
+    "input",
+    "command",
+    "stdin",
+    "menu",
+    "ask",
+    "interact"
+  ]
+}
