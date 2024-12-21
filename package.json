@@ -26,5 +26,8 @@
     "menu",
     "ask",
     "interact"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
 }
