@@ -36,6 +36,7 @@
       "default": "./dist/index.js"
     },
     "./lib": {
+      "types": "./lib/index.d.ts",
       "require": "./lib/index.js",
       "default": "./lib/index.js"
     }
