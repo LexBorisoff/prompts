@@ -9,15 +9,15 @@ A wrapper around the [prompts](https://www.npmjs.com/package/prompts) package wi
 ## Installation
 
 ```bash
-npm install @lexjs/prompts --save-dev
+npm install @lexjs/prompts
 ```
 
 ```bash
-pnpm add @lexjs/prompts --save-dev
+pnpm add @lexjs/prompts
 ```
 
 ```bash
-yarn add @lexjs/prompts --dev
+yarn add @lexjs/prompts
 ```
 
 ## Usage
