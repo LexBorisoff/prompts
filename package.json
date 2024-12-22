@@ -1,7 +1,10 @@
 {
   "name": "@lexjs/prompts",
   "version": "0.0.0-semantically-released",
-  "description": "",
+  "description": "Prompts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepack": "npm run build",
     "build": "npm run tsc",
@@ -22,8 +25,13 @@
     "email": "lex@borisoff.dev",
     "url": "https://borisoff.dev"
   },
-  "publishConfig": {
-    "access": "public"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LexBorisoff/prompts.git"
+  },
+  "homepage": "https://github.com/LexBorisoff/prompts",
+  "bugs": {
+    "url": "https://github.com/LexBorisoff/prompts/issues"
   },
   "files": [
     "dist",
