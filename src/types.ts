@@ -1,4 +1,4 @@
-import type { Answers, Choice, PromptObject } from '../lib/index';
+import type { Choice, PromptObject } from '../lib/index';
 
 export type OmitKey<T extends object, K extends keyof T> = Pick<
   T,
@@ -22,11 +22,9 @@ export interface AutocompleteConfig<
 export type AutocompleteReturn<
   C extends Choice,
   Name extends string = string,
-> = Promise<
-  OmitKey<Answers<Name>, Name> & {
-    [K in Name]: C['value'] | undefined;
-  }
->;
+> = Promise<{
+  [K in Name]: C['value'] | undefined;
+}>;
 
 /* ~~~ SELECT ~~~  */
 export interface SelectConfig<C extends Choice, Name extends string = string>
@@ -37,11 +35,9 @@ export interface SelectConfig<C extends Choice, Name extends string = string>
 export type SelectReturn<
   C extends Choice,
   Name extends string = string,
-> = Promise<
-  OmitKey<Answers<Name>, Name> & {
-    [K in Name]: C['value'] | undefined;
-  }
->;
+> = Promise<{
+  [K in Name]: C['value'] | undefined;
+}>;
 
 /* ~~~ MULTISELECT ~~~  */
 export interface MultiSelectConfig<
@@ -54,18 +50,16 @@ export interface MultiSelectConfig<
 export type MultiSelectReturn<
   C extends Choice,
   Name extends string = string,
-> = Promise<
-  OmitKey<Answers<Name>, Name> & {
-    [K in Name]: C['value'][] | undefined;
-  }
->;
+> = Promise<{
+  [K in Name]: C['value'][] | undefined;
+}>;
 
 /* ~~~ TEXT ~~~  */
 export type TextConfig<Name extends string> = BaseConfig<Name>;
 
-export type TextReturn<Name extends string> = Promise<
-  OmitKey<Answers<Name>, Name> & { [K in Name]: string | undefined }
->;
+export type TextReturn<Name extends string> = Promise<{
+  [K in Name]: string | undefined;
+}>;
 
 /* ~~~ TOGGLE ~~~  */
 export interface ToggleOptions<Name extends string> extends BaseConfig<Name> {
