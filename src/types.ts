@@ -36,7 +36,7 @@ export type MultiSelectReturn<
 }>;
 
 /* ~~~ TOGGLE ~~~  */
-export interface ToggleOptions<Name extends string> extends BaseConfig<Name> {
+export interface ToggleConfig<Name extends string> extends BaseConfig<Name> {
   active?: string;
   inactive?: string;
   initial?: boolean;

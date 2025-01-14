@@ -7,7 +7,7 @@ import type {
   MultiSelectReturn,
   SelectConfig,
   SelectReturn,
-  ToggleOptions,
+  ToggleConfig,
   ToggleReturn,
 } from './types';
 
@@ -53,7 +53,7 @@ const prompts = {
       inactive = 'no',
       initial = false,
       ...config
-    }: ToggleOptions<Name>,
+    }: ToggleConfig<Name>,
     options?: Options,
   ): ToggleReturn<Name> {
     return await $_(
