@@ -11,19 +11,8 @@ export type BaseConfig<Name extends string = string> = OmitKey<
 > &
   Required<Pick<PromptObject<Name>, 'message'>>;
 
-/* ~~~ AUTOCOMPLETE ~~~  */
-export interface AutocompleteConfig<
-  C extends Choice,
-  Name extends string = string,
-> extends BaseConfig<Name> {
-  choices: C[];
-}
-
-export type AutocompleteReturn<
-  C extends Choice,
-  Name extends string = string,
-> = Promise<{
-  [K in Name]: C['value'] | undefined;
+export type BaseReturn<Name extends string = string> = Promise<{
+  [K in Name]: string | undefined;
 }>;
 
 /* ~~~ SELECT ~~~  */
@@ -39,26 +28,11 @@ export type SelectReturn<
   [K in Name]: C['value'] | undefined;
 }>;
 
-/* ~~~ MULTISELECT ~~~  */
-export interface MultiSelectConfig<
-  C extends Choice,
-  Name extends string = string,
-> extends BaseConfig<Name> {
-  choices: C[];
-}
-
 export type MultiSelectReturn<
   C extends Choice,
   Name extends string = string,
 > = Promise<{
   [K in Name]: C['value'][] | undefined;
-}>;
-
-/* ~~~ TEXT ~~~  */
-export type TextConfig<Name extends string> = BaseConfig<Name>;
-
-export type TextReturn<Name extends string> = Promise<{
-  [K in Name]: string | undefined;
 }>;
 
 /* ~~~ TOGGLE ~~~  */
