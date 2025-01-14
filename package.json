@@ -3,7 +3,8 @@
   "version": "0.0.0-semantically-released",
   "description": "Prompts",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "scripts": {
     "prepack": "npm run build",
