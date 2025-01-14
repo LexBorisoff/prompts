@@ -28,17 +28,22 @@ import $_ from '@lexjs/prompts';
 async main() {
   const { answer } = await $_.text({
     name: 'answer',
-    message: 'Type something'
-  })
+    message: 'Type something',
+  });
 }
 ```
 
 ## Methods
 
-The following methods are available:
-
 - `autocomplete`
-- `select`
+- `autocompleteMultiselect`
+- `confirm`
+- `date`
+- `invisible`
+- `list`
 - `multiselect`
+- `number`
+- `password`
+- `select`
 - `text`
 - `toggle`
