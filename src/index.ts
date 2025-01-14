@@ -2,24 +2,21 @@ import $_ = require('../lib');
 
 import type { Choice, Options } from '../lib';
 import type {
-  AutocompleteConfig,
-  AutocompleteReturn,
-  MultiSelectConfig,
+  BaseConfig,
+  BaseReturn,
   MultiSelectReturn,
   SelectConfig,
   SelectReturn,
-  TextConfig,
-  TextReturn,
-  ToggleOptions,
+  ToggleConfig,
   ToggleReturn,
 } from './types';
 
 const prompts = {
-  async autocomplete<C extends Choice, Name extends string = string>(
-    config: AutocompleteConfig<C, Name>,
+  async text<Name extends string = string>(
+    config: BaseConfig<Name>,
     options?: Options,
-  ): AutocompleteReturn<C, Name> {
-    return await $_({ ...config, type: 'autocomplete' }, options);
+  ): BaseReturn<Name> {
+    return await $_({ ...config, type: 'text' }, options);
   },
 
   async select<C extends Choice, Name extends string = string>(
@@ -30,17 +27,24 @@ const prompts = {
   },
 
   async multiselect<C extends Choice, Name extends string = string>(
-    config: MultiSelectConfig<C, Name>,
+    config: SelectConfig<C, Name>,
     options?: Options,
   ): MultiSelectReturn<C, Name> {
     return await $_({ ...config, type: 'multiselect' }, options);
   },
 
-  async text<Name extends string = string>(
-    config: TextConfig<Name>,
+  async autocomplete<C extends Choice, Name extends string = string>(
+    config: SelectConfig<C, Name>,
     options?: Options,
-  ): TextReturn<Name> {
-    return await $_({ ...config, type: 'text' }, options);
+  ): SelectReturn<C, Name> {
+    return await $_({ ...config, type: 'autocomplete' }, options);
+  },
+
+  async autocompleteMultiselect<C extends Choice, Name extends string = string>(
+    config: SelectConfig<C, Name>,
+    options?: Options,
+  ): MultiSelectReturn<C, Name> {
+    return await $_({ ...config, type: 'autocompleteMultiselect' }, options);
   },
 
   async toggle<Name extends string>(
@@ -49,7 +53,7 @@ const prompts = {
       inactive = 'no',
       initial = false,
       ...config
-    }: ToggleOptions<Name>,
+    }: ToggleConfig<Name>,
     options?: Options,
   ): ToggleReturn<Name> {
     return await $_(
@@ -62,6 +66,48 @@ const prompts = {
       },
       options,
     );
+  },
+
+  async confirm<Name extends string = string>(
+    config: BaseConfig<Name>,
+    options?: Options,
+  ): BaseReturn<Name> {
+    return await $_({ ...config, type: 'confirm' }, options);
+  },
+
+  async password<Name extends string = string>(
+    config: BaseConfig<Name>,
+    options?: Options,
+  ): BaseReturn<Name> {
+    return await $_({ ...config, type: 'password' }, options);
+  },
+
+  async invisible<Name extends string = string>(
+    config: BaseConfig<Name>,
+    options?: Options,
+  ): BaseReturn<Name> {
+    return await $_({ ...config, type: 'invisible' }, options);
+  },
+
+  async number<Name extends string = string>(
+    config: BaseConfig<Name>,
+    options?: Options,
+  ): BaseReturn<Name> {
+    return await $_({ ...config, type: 'number' }, options);
+  },
+
+  async list<Name extends string = string>(
+    config: BaseConfig<Name>,
+    options?: Options,
+  ): BaseReturn<Name> {
+    return await $_({ ...config, type: 'list' }, options);
+  },
+
+  async date<Name extends string = string>(
+    config: BaseConfig<Name>,
+    options?: Options,
+  ): BaseReturn<Name> {
+    return await $_({ ...config, type: 'date' }, options);
   },
 };
 
