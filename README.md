@@ -1,5 +1,8 @@
 # `@lexjs/prompts`
 
+![Build](https://img.shields.io/github/actions/workflow/status/LexBorisoff/prompts/release.yml)
+![NPM Version](https://img.shields.io/npm/v/@lexjs/prompts)
+
 A wrapper around the [prompts](https://www.npmjs.com/package/prompts) package with abstracted methods.
 
 - [Installation](#installation)
