@@ -58,6 +58,8 @@ const result = await $_.autocomplete({
 ### `autocompleteMultiselect`
 
 ```typescript
+import $_ from '@lexjs/prompts';
+
 const result = await $_.autocompleteMultiselect({
   message: 'Pick colors',
   name: 'colors',
