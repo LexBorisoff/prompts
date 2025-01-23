@@ -60,7 +60,7 @@ const Demo = {
     }
     case Demo.date: {
       const result = await $_.date({
-        message: 'Enter some date',
+        message: 'Enter a date',
         name: 'date',
       });
       console.log(result);
