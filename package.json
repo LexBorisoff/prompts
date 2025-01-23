@@ -1,7 +1,7 @@
 {
   "name": "@lexjs/prompts",
   "version": "0.0.0-semantically-released",
-  "description": "Prompts",
+  "description": "Interactive prompts",
   "publishConfig": {
     "access": "public",
     "provenance": true
