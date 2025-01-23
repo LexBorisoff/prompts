@@ -53,7 +53,7 @@ const result = await $_.autocomplete({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/autocomplete.gif?raw=true" alt="autocomplete prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/autocomplete.gif?raw=true" alt="autocomplete prompt" width="500" />
 
 ### `autocompleteMultiselect`
 
@@ -74,7 +74,7 @@ const result = await $_.autocompleteMultiselect({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/autocomplete-multiselect.gif?raw=true" alt="autocompleteMultiselect prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/autocomplete-multiselect.gif?raw=true" alt="autocompleteMultiselect prompt" width="500" />
 
 ### `confirm`
 
@@ -87,7 +87,7 @@ const result = await $_.confirm({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/confirm.gif?raw=true" alt="confirm prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/confirm.gif?raw=true" alt="confirm prompt" width="500" />
 
 ### `date`
 
@@ -100,7 +100,7 @@ const result = await $_.date({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/date.gif?raw=true" alt="date prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/date.gif?raw=true" alt="date prompt" width="500" />
 
 ### `invisible`
 
@@ -113,7 +113,7 @@ const result = await $_.invisible({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/invisible.gif?raw=true" alt="invisible prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/invisible.gif?raw=true" alt="invisible prompt" width="500" />
 
 ### `list`
 
@@ -127,7 +127,7 @@ const result = await $_.list({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/list.gif?raw=true" alt="list prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/list.gif?raw=true" alt="list prompt" width="500" />
 
 ### `multiselect`
 
@@ -148,7 +148,7 @@ const result = await $_.multiselect({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/multiselect.gif?raw=true" alt="multiselect prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/multiselect.gif?raw=true" alt="multiselect prompt" width="500" />
 
 ### `number`
 
@@ -164,7 +164,7 @@ const result = await $_.number({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/number.gif?raw=true" alt="number prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/number.gif?raw=true" alt="number prompt" width="500" />
 
 ### `password`
 
@@ -177,7 +177,7 @@ const result = await $_.password({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/password.gif?raw=true" alt="password prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/password.gif?raw=true" alt="password prompt" width="500" />
 
 ### `select`
 
@@ -197,7 +197,7 @@ const result = await $_.select({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/select.gif?raw=true" alt="select prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/select.gif?raw=true" alt="select prompt" width="500" />
 
 ### `text`
 
@@ -210,7 +210,7 @@ const result = await $_.text({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/text.gif?raw=true" alt="text prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/text.gif?raw=true" alt="text prompt" width="500" />
 
 ### `toggle`
 
@@ -223,7 +223,7 @@ const result = await $_.toggle({
 });
 ```
 
-<img src="https://github.com/LexBorisoff/prompts/blob/demo/demo/toggle.gif?raw=true" alt="toggle prompt" width="500" />
+<img src="https://github.com/LexBorisoff/prompts/blob/main/demo/toggle.gif?raw=true" alt="toggle prompt" width="500" />
 
 ## Credits
 
