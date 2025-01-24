@@ -35,6 +35,10 @@ export type MultiSelectReturn<
   [K in Name]: C['value'][] | undefined;
 }>;
 
+export type NumberReturn<Name extends string = string> = Promise<{
+  [K in Name]: number | undefined;
+}>;
+
 /* ~~~ TOGGLE ~~~  */
 export interface ToggleConfig<Name extends string> extends BaseConfig<Name> {
   active?: string;

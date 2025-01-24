@@ -5,6 +5,7 @@ import type {
   BaseConfig,
   BaseReturn,
   MultiSelectReturn,
+  NumberReturn,
   SelectConfig,
   SelectReturn,
   ToggleConfig,
@@ -92,8 +93,20 @@ const prompts = {
   async number<Name extends string = string>(
     config: BaseConfig<Name>,
     options?: Options,
-  ): BaseReturn<Name> {
-    return await $_({ ...config, type: 'number' }, options);
+  ): NumberReturn<Name> {
+    return await $_(
+      {
+        validate(input) {
+          return typeof input === 'number' || 'Enter a valid number';
+        },
+        ...config,
+        type: 'number',
+        format(input) {
+          return Number(input);
+        },
+      },
+      options,
+    );
   },
 
   async list<Name extends string = string>(
