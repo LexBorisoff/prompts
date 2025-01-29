@@ -58,10 +58,9 @@ declare namespace prompts {
     function toggle(args: PromptObject): void;
   }
 
-  // Based upon: https://github.com/terkelg/prompts/blob/d7d2c37a0009e3235b2e88a7d5cdbb114ac271b2/lib/elements/select.js#L29
-  interface Choice {
+  interface Choice<Value = any> {
     title: string;
-    value?: any;
+    value?: Value;
     disabled?: boolean | undefined;
     selected?: boolean | undefined;
     description?: string | undefined;
