@@ -25,14 +25,14 @@ export type SelectReturn<
   C extends Choice,
   Name extends string = string,
 > = Promise<{
-  [K in Name]: C['value'] | undefined;
+  [K in Name]: NonNullable<C['value']> | undefined;
 }>;
 
 export type MultiSelectReturn<
   C extends Choice,
   Name extends string = string,
 > = Promise<{
-  [K in Name]: C['value'][] | undefined;
+  [K in Name]: NonNullable<C['value']>[] | undefined;
 }>;
 
 export type NumberReturn<Name extends string = string> = Promise<{
