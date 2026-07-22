@@ -16,10 +16,8 @@ export type BaseReturn<Name extends string = string> = Promise<{
 }>;
 
 /* ~~~ SELECT ~~~  */
-export interface SelectConfig<
-  C extends Choice,
-  Name extends string = string,
-> extends BaseConfig<Name> {
+export interface SelectConfig<C extends Choice, Name extends string = string>
+  extends BaseConfig<Name> {
   choices: C[];
 }
 
