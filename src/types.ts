@@ -16,8 +16,10 @@ export type BaseReturn<Name extends string = string> = Promise<{
 }>;
 
 /* ~~~ SELECT ~~~  */
-export interface SelectConfig<C extends Choice, Name extends string = string>
-  extends BaseConfig<Name> {
+export interface SelectConfig<
+  C extends Choice,
+  Name extends string = string,
+> extends BaseConfig<Name> {
   choices: C[];
 }
 
@@ -38,6 +40,14 @@ export type MultiSelectReturn<
 export type NumberReturn<Name extends string = string> = Promise<{
   [K in Name]: number | undefined;
 }>;
+
+/* ~~~ AUTOCOMPLETE ~~~  */
+export interface AutocompleteConfig<
+  C extends Choice,
+  Name extends string = string,
+> extends SelectConfig<C, Name> {
+  clearFirst?: boolean;
+}
 
 /* ~~~ TOGGLE ~~~  */
 export interface ToggleConfig<Name extends string> extends BaseConfig<Name> {
