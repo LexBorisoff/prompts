@@ -39,6 +39,14 @@ export type NumberReturn<Name extends string = string> = Promise<{
   [K in Name]: number | undefined;
 }>;
 
+/* ~~~ AUTOCOMPLETE ~~~  */
+export interface AutocompleteConfig<
+  C extends Choice,
+  Name extends string = string,
+> extends SelectConfig<C, Name> {
+  clearFirst?: boolean;
+}
+
 /* ~~~ TOGGLE ~~~  */
 export interface ToggleConfig<Name extends string> extends BaseConfig<Name> {
   active?: string;
@@ -47,5 +55,10 @@ export interface ToggleConfig<Name extends string> extends BaseConfig<Name> {
 }
 
 export type ToggleReturn<Name extends string> = Promise<{
+  [K in Name]: boolean | undefined;
+}>;
+
+/* ~~~ CONFIRM ~~~  */
+export type ConfirmReturn<Name extends string> = Promise<{
   [K in Name]: boolean | undefined;
 }>;

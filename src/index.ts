@@ -7,9 +7,11 @@ import type {
   MultiSelectReturn,
   NumberReturn,
   SelectConfig,
+  AutocompleteConfig,
   SelectReturn,
   ToggleConfig,
   ToggleReturn,
+  ConfirmReturn,
 } from './types';
 
 const prompts = {
@@ -35,7 +37,7 @@ const prompts = {
   },
 
   async autocomplete<C extends Choice, Name extends string = string>(
-    config: SelectConfig<C, Name>,
+    config: AutocompleteConfig<C, Name>,
     options?: Options,
   ): SelectReturn<C, Name> {
     return await $_({ ...config, type: 'autocomplete' }, options);
@@ -72,7 +74,7 @@ const prompts = {
   async confirm<Name extends string = string>(
     config: BaseConfig<Name>,
     options?: Options,
-  ): BaseReturn<Name> {
+  ): ConfirmReturn<Name> {
     return await $_({ ...config, type: 'confirm' }, options);
   },
 
