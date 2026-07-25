@@ -11,6 +11,7 @@ import type {
   SelectReturn,
   ToggleConfig,
   ToggleReturn,
+  ConfirmReturn,
 } from './types';
 
 const prompts = {
@@ -73,7 +74,7 @@ const prompts = {
   async confirm<Name extends string = string>(
     config: BaseConfig<Name>,
     options?: Options,
-  ): BaseReturn<Name> {
+  ): ConfirmReturn<Name> {
     return await $_({ ...config, type: 'confirm' }, options);
   },
 

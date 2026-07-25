@@ -57,3 +57,8 @@ export interface ToggleConfig<Name extends string> extends BaseConfig<Name> {
 export type ToggleReturn<Name extends string> = Promise<{
   [K in Name]: boolean | undefined;
 }>;
+
+/* ~~~ CONFIRM ~~~  */
+export type ConfirmReturn<Name extends string> = Promise<{
+  [K in Name]: boolean | undefined;
+}>;
