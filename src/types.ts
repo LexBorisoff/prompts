@@ -47,6 +47,14 @@ export interface AutocompleteConfig<
   clearFirst?: boolean;
 }
 
+/* ~~~ AUTOCOMPLETE MULTISELECT ~~~  */
+export interface AutocompleteMultiselectConfig<
+  C extends Choice,
+  Name extends string = string,
+> extends SelectConfig<C, Name> {
+  clearFirst?: boolean;
+}
+
 /* ~~~ TOGGLE ~~~  */
 export interface ToggleConfig<Name extends string> extends BaseConfig<Name> {
   active?: string;
