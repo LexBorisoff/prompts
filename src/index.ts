@@ -8,6 +8,7 @@ import type {
   NumberReturn,
   SelectConfig,
   AutocompleteConfig,
+  AutocompleteMultiselectConfig,
   SelectReturn,
   ToggleConfig,
   ToggleReturn,
@@ -44,7 +45,7 @@ const prompts = {
   },
 
   async autocompleteMultiselect<C extends Choice, Name extends string = string>(
-    config: SelectConfig<C, Name>,
+    config: AutocompleteMultiselectConfig<C, Name>,
     options?: Options,
   ): MultiSelectReturn<C, Name> {
     return await $_({ ...config, type: 'autocompleteMultiselect' }, options);
